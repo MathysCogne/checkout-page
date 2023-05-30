@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)*/
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
@@ -35,6 +36,7 @@ img {
   border-radius: 13px;
   width: 135px;
 }
+
 a {
   text-decoration: none;
   color: #000;
@@ -45,20 +47,40 @@ header h1 {
   margin: 70px 0;
   color: #4E5150;
 }
+@media screen and (max-width: 650px) {
+  header h1 {
+    margin: 40px 0;
+  }
+}
 
 main {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+@media screen and (max-width: 650px) {
+  main {
+    flex-direction: column;
+  }
+}
 
 section {
   width: 50%;
+}
+@media screen and (max-width: 650px) {
+  section {
+    width: 100%;
+  }
 }
 section h2 {
   font-size: 18px;
   color: #333333;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 650px) {
+  section h2 {
+    margin: 20px 0;
+  }
 }
 section form {
   display: flex;
@@ -116,9 +138,15 @@ section form button {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 650px) {
+  section form button {
+    margin: 0;
+    width: 97%;
+  }
 }
 section form button:hover {
   background: #E08E3E;
@@ -136,22 +164,38 @@ section .cont-txt {
 
 aside {
   width: 30%;
+  min-width: 290px;
   height: -moz-fit-content;
   height: fit-content;
   display: inline-flex;
   flex-direction: column;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   background: #F2F2F2;
   border-radius: 12px;
 }
+@media screen and (max-width: 650px) {
+  aside {
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 0px;
+  }
+}
 aside h3 {
   font-size: 16px;
+  margin: 10px 0 0 28px;
 }
 aside article {
+  margin-bottom: 20px;
   display: flex;
 }
+@media screen and (max-width: 650px) {
+  aside article {
+    justify-content: space-around;
+  }
+}
 aside article p {
+  margin: 10px 0 0 28px;
   color: #F2994A;
   font-size: 16px;
 }
@@ -163,17 +207,69 @@ aside article span {
 aside .card-info {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
+  margin-top: 30px;
 }
 aside .card-info div {
   display: flex;
   justify-content: space-between;
-  margin: 15px 0;
+  margin-top: 15px;
   padding-top: 20px;
   border-top: 1px solid #BDBDBD;
 }
 aside .card-info div p {
   font-size: 14px;
+}
+
+.styled-input {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.styled-input input[type=number] {
+  margin: 10px 0;
+  padding: 15px 50px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  /* Firefox */
+  -moz-appearance: textfield;
+  /* Chrome */
+  /* Opéra*/
+}
+.styled-input input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.styled-input input[type=number]::-o-inner-spin-button {
+  -o-appearance: none;
+  margin: 0;
+}
+.styled-input .styled-input-minus:before {
+  background-color: #E0E0E0;
+  color: #828282;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  position: relative;
+  left: 37px;
+  content: "-";
+  cursor: pointer;
+}
+.styled-input .styled-input-plus:before {
+  background-color: #E0E0E0;
+  color: #828282;
+  padding: 2px 8px;
+  font-size: 20px;
+  border-radius: 4px;
+  position: relative;
+  right: 37px;
+  content: "+";
+  cursor: pointer;
 }
 
 footer {
