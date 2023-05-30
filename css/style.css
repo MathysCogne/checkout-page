@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)*/
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.contenair {
+  width: 92%;
+  margin: auto;
+}
+@media screen and (min-width: 900px) {
+  .contenair {
+    width: 80%;
+    max-width: 1100px;
+    min-height: 85vh;
+  }
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 13px;
+  width: 135px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 70px 0;
+  color: #4E5150;
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+section {
+  width: 50%;
+}
+section h2 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+section form {
+  display: flex;
+  flex-direction: column;
+}
+section article {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+section article div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+section label {
+  font-size: 12px;
+  color: #4F4F4F;
+  margin: 5px 0 5px 3px;
+}
+section form {
+  color: #828282;
+}
+section form span {
+  border: 1px solid #828282;
+  border-radius: 12px 0 0 12px;
+  padding: 14px;
+  min-width: 30px;
+}
+section form input, section form select {
+  position: relative;
+  right: 15px;
+  border-radius: 0 12px 12px 0;
+  border: 1px solid #828282;
+  border-left: 1px solid rgba(255, 255, 255, 0);
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+section form select {
+  min-height: 54px;
+  color: #828282;
+  font-family: "Montserrat", sans-serif;
+}
+section form input:focus, section form select:focus {
+  outline: none;
+}
+section form button {
+  background: #F2994A;
+  border-radius: 12px;
+  width: 150px;
+  padding: 20px;
+  border: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+section form button:hover {
+  background: #E08E3E;
+}
+section .cont-icn {
+  flex-direction: row;
+  align-items: center;
+}
+section .cont-txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+aside {
+  width: 30%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 10px;
+  background: #F2F2F2;
+  border-radius: 12px;
+}
+aside h3 {
+  font-size: 16px;
+}
+aside article {
+  display: flex;
+}
+aside article p {
+  color: #F2994A;
+  font-size: 16px;
+}
+aside article span {
+  color: black;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+aside .card-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+}
+aside .card-info div {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding-top: 20px;
+  border-top: 1px solid #BDBDBD;
+}
+aside .card-info div p {
+  font-size: 14px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: #BDBDBD;
+  margin: 50px 0;
+}
+footer p {
+  font-size: 14px;
+}
+footer a {
+  color: #BDBDBD;
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */
